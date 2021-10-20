@@ -1,0 +1,38 @@
+{%extends 'base1.html'%} {%block slider%}
+<form method="POST">
+    {%csrf_token%}
+    <table cellspacing="10" cellpading="10">
+        <tr>
+            <td>
+                <textarea cols="80" rows="3" name="srch"></textarea>
+            </td>
+            <td><input type="submit" value="Search"></td>
+        </tr>
+    </table>
+
+</form>
+{%endblock%} {%block main%} {%for i in pl%}
+<div class="col-sm-4 col-lg-4 col-md-4">
+    <div class="thumbnail">
+        <img src="{{i.img}}" alt="" width="300" height="200">
+        <div class="caption">
+            <h4 class="pull-right">{{i.price}}</h4>
+            <h4><a href="#">{{i.name}}</a>
+            </h4>
+            <p>{{i.description}}</p>
+        </div>
+        <div class="ratings">
+            <p class="pull-right">15 reviews</p>
+            <p>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+            </p>
+        </div>
+    </div>
+</div>
+{%endfor%} {%endblock%}
+
+<!-- Project -->

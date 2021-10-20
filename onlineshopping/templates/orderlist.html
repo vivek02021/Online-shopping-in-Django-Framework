@@ -1,0 +1,21 @@
+{%extends 'base.html'%} {%block main%} {%csrf_token%}
+<table border="3">
+    <tr>
+        <th>Id</th>
+        <th>totalBill</th>
+        <th>Status</th>
+        <th>OrderDate</th>
+    </tr>
+    {%for i in orlist %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.totalBill}}</td>
+        <td>{{i.status}}</td>
+        <td>{{i.orderDate}}</td>
+
+    </tr>
+    {%endfor%}
+
+</table>
+
+{%endblock%}

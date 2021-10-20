@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {%load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Shop | ItVedant </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bmin.css'%}" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="{% static 'css/app.css'%}" rel="stylesheet">
+
+</head>
+
+<body>
+    {%include 'navbar.html'%}
+
+
+    <div class="container">
+
+        <div class="row">
+
+            <!--SideBar -->
+            {%include 'sideBar.html'%}
+
+            <div class="col-md-9">
+
+                <div class="row carousel-holder">
+
+                    <div class="col-md-12">
+                        <!--Slider-->
+                        {%include 'slider.html'%}
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    {%block main%} {%endblock%}
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <div class="container">
+
+        <hr>
+        <!--Footer-->
+        {%include 'footer.html'%}
+
+
+
+    </div>
+    <!-- /.container -->
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+</body>
+
+</html>
